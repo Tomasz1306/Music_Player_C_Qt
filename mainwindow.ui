@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: dark;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="m_PlaylistList">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>441</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Fixedsys</family>
+     </font>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget{
+	background-color: #0f052d;
+	color: #5fc75d;
+}
+QListWidget::item:selected{
+	border: 1px solid #29f825;
+	background-color: #0f052d;
+	color: #29f825;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="m_TrackList">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>441</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Fixedsys</family>
+     </font>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget{
+	background-color: #0f052d;
+	color: #5fc75d;
+}
+QListWidget::item:selected{
+	border: 1px solid #29f825;
+	background-color: #0f052d;
+	color: #29f825;
+}
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>290</y>
+      <width>331</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="1">
+      <widget class="QPushButton" name="m_removeTrackButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Remove Track</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="m_addTrackButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Add Track</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="m_stopButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>PAUSE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="m_playButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTipDuration">
+        <number>-1</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Play</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Loop</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="pushButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Auto</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="m_prevButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Prev</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="m_nextButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Next</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QSlider" name="m_timeSlider">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>125</y>
+      <width>441</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider{
+	background: black;
+}
+QSlider::groove:horizontal{
+	height: 16px;
+	background: green;
+}
+QSlider::handle:horizontal{
+	width: 40px;
+	background: #29f825;
+	border-radius: 6px;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>441</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="m_backward">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: 0f052d;
+	color: #5fc75d;
+	border: 3px outset green;
+	max-width: 25px;
+	max-height: 25px;
+}
+
+QPushButton:checked{
+	background-color: 0f052d;
+	color: #29f825;
+	border: 3px inset #2e2e2e;
+}
+QPushButton:unchecked{
+	background-color: 0f052d;
+	color: #1B8719;
+	border: 3px inset #2e2e2e;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_start">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: 0f052d;
+	color: #5fc75d;
+	border: 3px outset green;
+	max-width: 25px;
+	max-height: 25px;
+}
+
+QPushButton:checked{
+	background-color: 0f052d;
+	color: #29f825;
+	border: 3px inset #2e2e2e;
+}
+QPushButton:unchecked{
+	background-color: 0f052d;
+	color: #1B8719;
+	border: 3px inset #2e2e2e;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_forward">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: 0f052d;
+	color: #5fc75d;
+	border: 3px outset green;
+	max-width: 25px;
+	max-height: 25px;
+}
+
+QPushButton:checked{
+	background-color: 0f052d;
+	color: #29f825;
+	border: 3px inset #2e2e2e;
+}
+QPushButton:unchecked{
+	background-color: 0f052d;
+	color: #1B8719;
+	border: 3px inset #2e2e2e;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_mute">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: 0f052d;
+	color: #5fc75d;
+	border: 3px outset green;
+	max-width: 25px;
+	max-height: 25px;
+}
+
+QPushButton:checked{
+	background-color: 0f052d;
+	color: #29f825;
+	border: 3px inset #2e2e2e;
+}
+QPushButton:unchecked{
+	background-color: 0f052d;
+	color: #1B8719;
+	border: 3px inset #2e2e2e;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGraphicsView" name="m_view">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>441</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSlider" name="m_volumeSlider">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>20</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider{
+	background: black;
+}
+QSlider::groove:vertical{
+	weight: 16px;
+	background: green;
+}
+QSlider::handle:vertical{
+	height: 20px;
+	background: #29f825;
+	border-radius: 6px;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>250</y>
+      <width>331</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="m_newPlayListButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>New Playlist</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_removePlaylistButton">
+       <property name="font">
+        <font>
+         <family>Fixedsys</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: #0f052d ;
+	color: #5fc75d;
+}
+QPushButton:hover{
+	color: #29f825;
+	border: 2px solid #29f825;
+}
+QPushButton:pressed{
+	color: #29f825;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Remove Playlist</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGraphicsView" name="m_equalizer">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>10</y>
+      <width>301</width>
+      <height>111</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
